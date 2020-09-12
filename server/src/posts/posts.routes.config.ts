@@ -1,7 +1,4 @@
-import {
-    CommonRoutesConfig,
-    configureRoutes,
-} from '../common/common.routes.config';
+import { CommonRoutesConfig, configureRoutes } from '../common/common.routes.config';
 import { PostsController } from './controllers/posts.controller';
 import { PostsMiddleware } from './middlewares/posts.middleware';
 import express from 'express';
@@ -19,22 +16,22 @@ export class PostsRoutes extends CommonRoutesConfig implements configureRoutes {
             postsController.createPost,
         ]);
         this.app.put(`/posts/:postId`, [
-            postsMiddleware.validatePostExists,
+            // postsMiddleware.validatePostExists,
             postsMiddleware.extractPostId,
             postsController.put,
         ]);
         this.app.patch(`/posts/:postId`, [
-            postsMiddleware.validatePostExists,
+            // postsMiddleware.validatePostExists,
             postsMiddleware.extractPostId,
             postsController.patch,
         ]);
         this.app.delete(`/posts/:postId`, [
-            postsMiddleware.validatePostExists,
+            // postsMiddleware.validatePostExists,
             postsMiddleware.extractPostId,
             postsController.removePost,
         ]);
         this.app.get(`/posts/:postId`, [
-            postsMiddleware.validatePostExists,
+            // postsMiddleware.validatePostExists,
             postsMiddleware.extractPostId,
             postsController.getPostById,
         ]);

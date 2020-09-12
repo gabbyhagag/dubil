@@ -10,11 +10,7 @@ export class PostsMiddleware {
         return PostsMiddleware.instance;
     }
 
-    validateRequiredCreatePostBodyFields(
-        req: express.Request,
-        res: express.Response,
-        next: express.NextFunction
-    ) {
+    validateRequiredCreatePostBodyFields(req: express.Request, res: express.Response, next: express.NextFunction) {
         console.log(req.body);
 
         if (req.body && req.body.email && req.body.password) {
@@ -26,11 +22,7 @@ export class PostsMiddleware {
         }
     }
 
-    async validatePostExists(
-        req: express.Request,
-        res: express.Response,
-        next: express.NextFunction
-    ) {
+    async validatePostExists(req: express.Request, res: express.Response, next: express.NextFunction) {
         const postService = PostsService.getInstance();
         const post = await postService.readById(req.params.postId);
         if (post) {
@@ -42,11 +34,7 @@ export class PostsMiddleware {
         }
     }
 
-    async extractPostId(
-        req: express.Request,
-        res: express.Response,
-        next: express.NextFunction
-    ) {
+    async extractPostId(req: express.Request, res: express.Response, next: express.NextFunction) {
         req.body.id = req.params.postId;
         next();
     }

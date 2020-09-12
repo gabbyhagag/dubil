@@ -1,8 +1,32 @@
+const posts = [
+    {
+        id: '1',
+        name: 'post1',
+        title: 'bla bla 1',
+    },
+    {
+        id: '2',
+        name: 'post1',
+        title: 'bla bla 1',
+    },
+    {
+        id: '3',
+        name: 'post1',
+        title: 'bla bla 1',
+    },
+    {
+        id: '4',
+        name: 'post1',
+        title: 'bla bla 1',
+    },
+];
+
 export class GenericInMemoryDao {
     private static instance: GenericInMemoryDao;
     posts: any = [];
     constructor() {
         console.log('Created new instance of GenericInMemoryDao');
+        this.posts = posts;
     }
 
     static getInstance(): GenericInMemoryDao {
@@ -25,49 +49,33 @@ export class GenericInMemoryDao {
     }
 
     putPostById(post: any) {
-        const objIndex = this.posts.findIndex(
-            (obj: { id: any }) => obj.id === post.id
-        );
-        const updatedPosts = [
-            ...this.posts.slice(0, objIndex),
-            post,
-            ...this.posts.slice(objIndex + 1),
-        ];
+        const objIndex = this.posts.findIndex((obj: { id: any }) => obj.id === post.id);
+        const updatedPosts = [...this.posts.slice(0, objIndex), post, ...this.posts.slice(objIndex + 1)];
         this.posts = updatedPosts;
         return `${post.id} updated via put`;
     }
 
     patchPostById(post: any) {
-        const objIndex = this.posts.findIndex(
-            (obj: { id: any }) => obj.id === post.id
-        );
+        const objIndex = this.posts.findIndex((obj: { id: any }) => obj.id === post.id);
         let currentPost = this.posts[objIndex];
         for (let i in post) {
             if (i !== 'id') {
                 currentPost[i] = post[i];
             }
         }
-        this.posts = [
-            ...this.posts.slice(0, objIndex),
-            currentPost,
-            ...this.posts.slice(objIndex + 1),
-        ];
+        this.posts = [...this.posts.slice(0, objIndex), currentPost, ...this.posts.slice(objIndex + 1)];
         return `${post.id} patched`;
     }
 
     removePostById(postId: string) {
-        const objIndex = this.posts.findIndex(
-            (obj: { id: any }) => obj.id === postId
-        );
+        const objIndex = this.posts.findIndex((obj: { id: any }) => obj.id === postId);
         this.posts = this.posts.splice(objIndex, 1);
         return `${postId} removed`;
     }
 
     getByEmail(email: string) {
         return new Promise((resolve) => {
-            const objIndex = this.posts.findIndex(
-                (obj: { email: any }) => obj.email === email
-            );
+            const objIndex = this.posts.findIndex((obj: { email: any }) => obj.email === email);
             let currentPost = this.posts[objIndex];
             if (currentPost) {
                 resolve(currentPost);
