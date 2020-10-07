@@ -1,0 +1,93 @@
+ /*!
+  * Author: Niv Daminovich
+  * Version: 1.6
+  * Copyright 2020
+  */
+
+
+// Variables
+//
+@import "../global_config/colors";
+// Color system
+
+$primary:       $blue_black;
+$secondary:     $blue_azul;
+$gray:          $gray-600;
+$success:       $green;
+$info:          $cyan;
+$warning:       $orange;
+$danger:        $red;
+$light:         $gray-100;
+$dark:          $gray-800;
+
+
+$theme-colors: (
+  "primary":    $primary,
+  "secondary": $secondary,
+  "gray": $gray,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "blue_azul": $blue_azul,
+  "light": $light,
+  "dark": $dark
+);
+// scss-docs-end theme-colors-map
+
+
+
+
+
+// Links
+//
+// Style anchor elements.
+$link-color:       $blue_azul;
+$link-hover-color: darken($link-color, 15%);
+
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+ 
+
+/* $grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1240px,
+  xxl: 1420px
+);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 970px,
+  xl: 1220px,
+  xxl: 1440px
+) ; */
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+// $grid-gutter-width:           40px;
+
+// Buttons + Forms
+$input-btn-font-size: inherit;
+
+
+$btn-border-radius: 0;
+
+
+
+$box-shadow: 0 0 2.0625rem 0.75rem rgba($black, 0.06); // 0 0 33px 12px
+$box-shadow-sm: 0 0 0.625rem 0.3125rem rgba($black, 0.06); // 0 0 10px 5px

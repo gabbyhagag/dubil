@@ -1,0 +1,83 @@
+/*
+ * VARIABLES
+**/
+
+$assetsFolder: '~src/assets';
+
+
+
+// font size
+$fontSize: (
+  70,
+  45,
+  40,
+  30,
+  26,
+  22,
+  20,
+  18,
+  16,
+  14
+);
+
+@each $text_size in $fontSize {
+  %fz-#{$text_size} {
+    font-size: rem($text_size);
+  }
+}
+
+%text-inherit { font-size: inherit; }
+
+
+// font
+%fnt-light { font-weight: 300; }
+%fnt-SemiBold { font-weight: 600; }
+%fnt-bold { font-weight: 700; }
+%fnt-exteaBold { font-weight: 800; }
+%fnt-normal {font-weight: normal}
+
+
+
+
+// font color
+$fontColor: (
+  'blue_black': $blue_black,
+  'blue_azul': $blue_azul,
+  'white': $white,
+  'turquoise': $blue_dirty,
+  'orange': $orange,
+  'error': $error
+);
+
+@each $name, $color in $fontColor {
+  %fnt-#{$name} {
+    color: $color;
+  }
+}
+
+
+
+
+// bgs
+$bgColor: (
+  'gray': $bg_gray,
+  'blue': $bg_blue,
+  'blue_light_grey': $blue_light_grey,
+);
+
+@each $name, $color in $bgColor {
+  %bg-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+
+/**
+* Responsive breakpoints
+*/
+// xs: 0,      // down -  575
+// sm: 576px,  // down -  767  
+// md: 768px,  // down -  991
+// lg: 992px,  // down -  1199
+// xl: 1200px, // down -  13399
+// xxl: 1400px

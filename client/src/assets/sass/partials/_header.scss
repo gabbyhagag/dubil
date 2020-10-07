@@ -1,0 +1,44 @@
+/*
+  Header
+*/
+
+.app--header {  
+  border: 1px solid $bg_gray;
+  box-shadow: 0 rem(3) rem(28) 0 rgba($blue_color_2, 0.5);
+  z-index: 10;
+  transition: top 0.7s ease-out;
+
+  @include media-breakpoint-down(sm) {
+    min-height: rem(60);
+    top: rem(-6);
+  }
+  @include media-breakpoint-up(md) {
+    min-height: rem(80);
+    top: rem(-10);
+    opacity: 0.93;
+  }
+
+
+  .container {
+    padding-top: rem(6);
+    padding-bottom: rem(6);
+  }
+
+  .brand--logo {
+    display: inline-block;
+    max-width: rem(120);
+
+    @include media-breakpoint-down(sm) {
+      max-width: rem(80);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}

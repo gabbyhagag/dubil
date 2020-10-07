@@ -1,0 +1,29 @@
+
+html {
+  @include responsive-font(2.6vw, 10px, 14px);
+
+  @include media-breakpoint-up(xl) {
+    font-size: 16px;
+  }
+
+
+}
+
+body {
+  font-family: "Open Sans Hebrew";
+  font-size: 1em;
+}
+
+@mixin selectionColor {
+  background-color: $yellow;
+}
+::selection { @include selectionColor(); /* WebKit/Blink Browsers */ }
+::-moz-selection { @include selectionColor(); /* Gecko Browsers */ }
+
+img {
+  @mixin selectionColor {
+    background-color: $blue_light;
+  }
+  &::selection { @include selectionColor(); /* WebKit/Blink Browsers */ }
+  &::-moz-selection { @include selectionColor(); /* Gecko Browsers */ }
+}

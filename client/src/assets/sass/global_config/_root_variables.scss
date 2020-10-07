@@ -1,0 +1,36 @@
+/*
+* Global Styles
+**/
+
+// font size
+@each $text_size in $fontSize {
+  .text-#{$text_size} {
+    font-size: rem(#{$text_size});
+  }
+}
+
+.text-inherit { font-size: inherit; }
+
+
+// font
+.fnt-light { @extend %fnt-light; }
+.fnt-normal { @extend %fnt-normal; }
+.fnt-SemiBold { @extend %fnt-SemiBold; }
+.fnt-bold { @extend %fnt-bold; }
+.fnt-exteaBold { @extend %fnt-exteaBold; }
+
+
+// font color
+@each $name, $color in $fontColor {
+  .fnt-#{$name} {
+    color: $color;
+  }
+}
+
+
+// bgs color
+@each $name, $color in $bgColor {
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}
