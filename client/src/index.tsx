@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
+// import "bootstrap/dist/css/bootstrap.min.css";
 import './index.scss';
+// import '../node_modules/bootstrap/dist/js/bootstrap.bundle.js';
+// import 'bootstrap/dist/js/bootstrap.bundle';
+
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
