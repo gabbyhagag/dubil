@@ -3,7 +3,7 @@ import { Menu } from '../menu/menu.component';
 
 import './menu-cover-page.styles.scss';
 
-const MenuCoverPage = ({ isOpenMenu, toggleAction }: IHeaderMenuProps) => {
+const MenuCoverPage = ({ isOpenMenu, toggleMenu }: IHeaderMenuProps) => {
     return (
         <div
             className={'header-menu--container ' + (isOpenMenu && 'is-open')}
@@ -14,14 +14,14 @@ const MenuCoverPage = ({ isOpenMenu, toggleAction }: IHeaderMenuProps) => {
                     <button
                         type='button'
                         onClick={() => {
-                            toggleAction();
+                            toggleMenu();
                         }}
                     >
                         X
                     </button>
                 </div>
                 <div className='header-menu--content'>
-                    <Menu></Menu>
+                    <Menu toggleMenu={toggleMenu}></Menu>
                 </div>
             </div>
         </div>
@@ -32,5 +32,5 @@ export default MenuCoverPage;
 
 interface IHeaderMenuProps {
     isOpenMenu: boolean;
-    toggleAction(): void;
+    toggleMenu(): void;
 }

@@ -11,13 +11,13 @@ class Header extends React.Component {
         isOpenMenu: false,
     };
 
-    handleToggle = () => {
+    handleToggleMenu = () => {
         this.setState({ isOpenMenu: !this.state.isOpenMenu });
     };
 
     render() {
         const { isOpenMenu } = this.state;
-        const { handleToggle } = this;
+        const { handleToggleMenu } = this;
         return (
             <header className='app-header app-header'>
                 <div className='container d-flex justify-content-between'>
@@ -25,12 +25,12 @@ class Header extends React.Component {
                         <div className='visually-hidden'>logo</div>
                         <Logo className='app-logo' aria-hidden='true' />
                     </Link>
-                    <button className='manu__trigger' onClick={handleToggle}>
+                    <button className='manu__trigger' onClick={handleToggleMenu}>
                         = Menu
                     </button>
                 </div>
                 {/* {isOpenMenu ? <HeaderMenu isOpenMenu={isOpenMenu} toggleAction={handleToggle}></HeaderMenu> : null} */}
-                <MenuCoverPage isOpenMenu={isOpenMenu} toggleAction={handleToggle}></MenuCoverPage>
+                <MenuCoverPage isOpenMenu={isOpenMenu} toggleMenu={handleToggleMenu}></MenuCoverPage>
             </header>
         );
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { MenuItem } from '../menu-item/menu-item';
 
-export const Menu = () => {
+export const Menu = ({ toggleMenu }: IMenuProps) => {
     const menu = {
         items: [
             {
@@ -26,7 +26,15 @@ export const Menu = () => {
     };
     return (
         <nav className='header-navbar'>
-            <ul>{menu.items.map((item) => !item.isHidden && <MenuItem item={item} key={item.id}></MenuItem>)}</ul>
+            <ul>
+                {menu.items.map(
+                    (item) => !item.isHidden && <MenuItem item={item} toggleMenu={toggleMenu} key={item.id}></MenuItem>
+                )}
+            </ul>
         </nav>
     );
 };
+
+interface IMenuProps {
+    toggleMenu(): void;
+}
