@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../assets/svg/logo.svg';
-import HeaderMenu from '../header-menu/header-menu.component';
+import MenuCoverPage from '../menu-cover-page/menu-cover-page.component';
 
 import './header.styles.scss';
 
@@ -30,7 +30,7 @@ class Header extends React.Component {
                     </button>
                 </div>
                 {/* {isOpenMenu ? <HeaderMenu isOpenMenu={isOpenMenu} toggleAction={handleToggle}></HeaderMenu> : null} */}
-                <HeaderMenu isOpenMenu={isOpenMenu} toggleAction={handleToggle}></HeaderMenu>
+                <MenuCoverPage isOpenMenu={isOpenMenu} toggleAction={handleToggle}></MenuCoverPage>
             </header>
         );
     }
