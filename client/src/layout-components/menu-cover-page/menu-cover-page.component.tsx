@@ -10,16 +10,6 @@ const MenuCoverPage = ({ isOpenMenu, toggleMenu }: IHeaderMenuProps) => {
             style={isOpenMenu ? { visibility: 'visible' } : { visibility: 'hidden' }}
         >
             <div className='container'>
-                <div className='header-menu--header'>
-                    <button
-                        type='button'
-                        onClick={() => {
-                            toggleMenu();
-                        }}
-                    >
-                        X
-                    </button>
-                </div>
                 <div className='header-menu--content'>
                     <Menu toggleMenu={toggleMenu}></Menu>
                 </div>

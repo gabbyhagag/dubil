@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../assets/svg/logo.svg';
@@ -6,34 +6,40 @@ import MenuCoverPage from '../menu-cover-page/menu-cover-page.component';
 
 import './header.styles.scss';
 
-class Header extends React.Component {
-    state = {
-        isOpenMenu: false,
+const Header = () => {
+    const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
+    const [isScroll, setIsScroll] = useState<boolean>(false);
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll, true);
+        return () => window.removeEventListener('scroll', handleScroll, true);
+    });
+
+    const handleScroll = () => {
+        if (window.scrollY > 102) {
+            setIsScroll(true);
+        } else setIsScroll(false);
     };
 
-    handleToggleMenu = () => {
-        this.setState({ isOpenMenu: !this.state.isOpenMenu });
+    const handleToggleMenu = () => {
+        setIsOpenMenu(!isOpenMenu);
     };
 
-    render() {
-        const { isOpenMenu } = this.state;
-        const { handleToggleMenu } = this;
-        return (
-            <header className='app-header app-header'>
-                <div className='container d-flex justify-content-between'>
-                    <Link to='/' className='logo-container'>
-                        <div className='visually-hidden'>logo</div>
-                        <Logo className='app-logo' aria-hidden='true' />
-                    </Link>
-                    <button className='manu__trigger' onClick={handleToggleMenu}>
-                        = Menu
-                    </button>
-                </div>
+    return (
+        <header className={'app-header-container' + (isScroll ? ' scroll' : '')}>
+            <div className='navbar-container'>
+                <Link to='/' className='logo-container'>
+                    <div className='visually-hidden'>logo</div>
+                    <Logo className='app-logo' aria-hidden='true' />
+                </Link>
+                <button className={'manu-trigger' + (isOpenMenu ? ' active' : '')} onClick={handleToggleMenu}>
+                    Menu
+                </button>
                 {/* {isOpenMenu ? <HeaderMenu isOpenMenu={isOpenMenu} toggleAction={handleToggle}></HeaderMenu> : null} */}
                 <MenuCoverPage isOpenMenu={isOpenMenu} toggleMenu={handleToggleMenu}></MenuCoverPage>
-            </header>
-        );
-    }
-}
+            </div>
+        </header>
+    );
+};
 
 export default Header;
