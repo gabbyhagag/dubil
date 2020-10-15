@@ -5,6 +5,8 @@ import { BlogItemPreview } from '../blog-item-preview/blog-item-preview.componen
 import './blog-overview.styles.scss';
 
 export const BlogOverview = ({ postsData }: IBlogOverviewProps) => {
+  console.log({ postsData });
+  
     return (
         <div className='blog-overview-container'>
             {postsData.map((post) => (

@@ -4,8 +4,9 @@ $font-family: 'Heebo', 'Helvetica Neue', sans-serif;
 
 @import 'assets/sass/global_config/colors';
 
-@import 'assets/sass/bootstrap_source/bootstrap_overrides'; // Import Bootstrap 5 and its default variables
-@import 'assets/sass/bootstrap_source/variables_overrides'; // Bootstrap overrides
+@import 'assets/sass/global_config/reboot';
+// @import 'assets/sass/bootstrap_source/bootstrap_overrides'; // Import Bootstrap 5 and its default variables
+// @import 'assets/sass/bootstrap_source/variables_overrides'; // Bootstrap overrides
 
 /*
 * Global Styles
@@ -65,12 +66,12 @@ body {
             }
         }
 
-        // #root {
-        //     display: flex;
-        //     height: 100vh;
-        //     flex-direction: column;
-        //     overflow: auto;
-        // }
+        #root {
+            display: flex;
+            min-height: 100vh;
+            flex-direction: column;
+            // overflow: auto;
+        }
     }
 }
 
@@ -125,6 +126,16 @@ svg {
         }
     }
 }
+
+
+.container {
+  max-width: map-get($container-max-widths, xxl); // The width is from _breakpoints_overrides;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+
 
 /**
  * PARTIALS
