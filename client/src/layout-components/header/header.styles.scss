@@ -1,90 +1,90 @@
 .app-header-container {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 120px;
-    font-size: 1.0625rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  font-size: 1.0625rem;
+  background-color: transparent;
+  box-shadow: 0 0 0 rgba(136, 136, 136, 0);
+  transition: height 0.2s, box-shadow 0.2s;
+
+  &.scroll {
+    height: 75px;
+    background: #f1f3f6;
+  }
+
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 0 3.125%;
+    height: 100%;
+  }
+
+  .logo-container {
+    align-self: center;
+  }
+
+  .manu-trigger {
+    --menu-button-color: #000;
+    position: relative;
+    display: inline-flex;
+    align-self: center;
+    align-items: center;
+    padding-left: 4.25rem;
+    color: var(--menu-button-color);
+    transition: all 0.2s ease-in-out;
     background-color: transparent;
-    box-shadow: 0 0 0 rgba(136, 136, 136, 0);
-    transition: height 0.2s, box-shadow 0.2s;
+    border: none;
+    z-index: 20;
 
-    &.scroll {
-        height: 75px;
-        background: #f1f3f6;
+    &::before {
+      position: absolute;
+      left: 0;
+      display: block;
+      height: 0;
+      content: "";
+      border-top: 1px solid var(--menu-button-color);
+      transition: inherit;
+      top: 5px;
+      width: 3.125rem;
+    }
+    &:hover {
+      &::before {
+        width: 1.875rem;
+      }
+      &::after {
+        width: 3.125rem;
+      }
     }
 
-    .navbar-container {
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-        padding: 0 3.125%;
-        height: 100%;
+    &::after {
+      position: absolute;
+      left: 0;
+      display: block;
+      height: 0;
+      content: "";
+      border-top: 1px solid var(--menu-button-color);
+      transition: inherit;
+      bottom: 5px;
+      width: 1.875rem;
     }
 
-    .logo-container {
-        align-self: center;
+    &.active {
+      color: transparent;
+      padding-left: 0;
+
+      &::before {
+        top: 50%;
+        width: 1.875rem;
+        transform: rotate(45deg) translateY(-50%);
+      }
+      &::after {
+        bottom: 50%;
+        width: 1.875rem;
+        transform: rotate(-45deg) translateY(50%);
+      }
     }
-
-    .manu-trigger {
-        --menu-button-color: #000;
-        position: relative;
-        display: inline-flex;
-        align-self: center;
-        align-items: center;
-        padding-left: 4.25rem;
-        color: var(--menu-button-color);
-        transition: all 0.2s ease-in-out;
-        background-color: transparent;
-        border: none;
-        z-index: 20;
-
-        &::before {
-            position: absolute;
-            left: 0;
-            display: block;
-            height: 0;
-            content: '';
-            border-top: 1px solid var(--menu-button-color);
-            transition: inherit;
-            top: 5px;
-            width: 3.125rem;
-        }
-        &:hover {
-            &::before {
-                width: 1.875rem;
-            }
-            &::after {
-                width: 3.125rem;
-            }
-        }
-
-        &::after {
-            position: absolute;
-            left: 0;
-            display: block;
-            height: 0;
-            content: '';
-            border-top: 1px solid var(--menu-button-color);
-            transition: inherit;
-            bottom: 5px;
-            width: 1.875rem;
-        }
-
-        &.active {
-            color: transparent;
-            padding-left: 0;
-
-            &::before {
-                top: 50%;
-                width: 1.875rem;
-                transform: rotate(45deg) translateY(-50%);
-            }
-            &::after {
-                bottom: 50%;
-                width: 1.875rem;
-                transform: rotate(-45deg) translateY(50%);
-            }
-        }
-    }
+  }
 }
