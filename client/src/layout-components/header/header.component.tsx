@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { RefObject, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { ReactComponent as Logo } from '../../assets/svg/logo.svg';
@@ -10,8 +10,27 @@ const Header = () => {
     const [isOpenMenu, setIsOpenMenu] = useState<boolean>(false);
     const [isScroll, setIsScroll] = useState<boolean>(false);
 
+    const myRef = React.createRef() as RefObject<HTMLElement>;
+    const [elementSize, setElementSize] = useState<Object>(
+      {
+        width:  null,
+        height: null,
+      }
+    );
+
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, true);
+        
+      console.log(myRef);
+        
+
+        // setElementSize({
+        //   height: myRef.current?.clientHeight
+        // })
+        
+      // console.log(elementSize);
+      // setElementSize(elementSize.white = )
+
         return () => window.removeEventListener('scroll', handleScroll, true);
     });
 
@@ -26,7 +45,11 @@ const Header = () => {
     };
 
     return (
-        <header className={'app-header-container' + (isScroll ? ' scroll' : '')}>
+        <header 
+          className={'app-header-container' + (isScroll ? ' scroll' : '')}
+          ref={myRef}
+          aria-label="header is close"
+        >
             <div className='navbar-container'>
                 <Link to='/' className='logo-container'>
                     <div className='visually-hidden'>logo</div>
