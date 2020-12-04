@@ -1,16 +1,16 @@
 export interface IPostPreview {
-  posts: IPost[];
+  posts: IPost[]
 }
 
 export interface IPost {
-  id:       String;
-  author:   String;
-  date:     String;
-  modified: String;
-  summary:  String;
-  title:    String;
-  status:   number;
-  mainImg:  String;
+  id: string
+  author: string
+  date: string
+  modified: string
+  summary: string
+  title: string
+  status: number
+  mainImg: string
 }
 
 export const postPreview: IPostPreview = {
@@ -20,7 +20,8 @@ export const postPreview: IPostPreview = {
       author: 'Porter, Cassandra, Sydnee, Darryl',
       date: '01/12/2020',
       modified: '21/04/2020',
-      summary: 'Morbi sit amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a,',
+      summary:
+        'Morbi sit amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a,',
       title: 'aliquet molestie tellus. Aenean',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -30,7 +31,8 @@ export const postPreview: IPostPreview = {
       author: 'Seth, Tanek, Emmanuel, Mariam',
       date: '05/01/2020',
       modified: '08/06/2021',
-      summary: 'cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim.',
+      summary:
+        'cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim.',
       title: 'massa. Mauris',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -62,7 +64,8 @@ export const postPreview: IPostPreview = {
       author: 'Dylan, Shaeleigh, Adara, Shaeleigh',
       date: '20/01/2021',
       modified: '10/12/2019',
-      summary: 'nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices. Duis volutpat',
+      summary:
+        'nulla magna, malesuada vel, convallis in, cursus et, eros. Proin ultrices. Duis volutpat',
       title: 'rutrum',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -83,7 +86,8 @@ export const postPreview: IPostPreview = {
       author: 'David, Gil, Jade, Hashim',
       date: '30/03/2020',
       modified: '29/04/2021',
-      summary: 'posuere cubilia Curae; Phasellus ornare. Fusce mollis. Duis sit amet diam eu',
+      summary:
+        'posuere cubilia Curae; Phasellus ornare. Fusce mollis. Duis sit amet diam eu',
       title: 'ornare tortor',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -104,7 +108,8 @@ export const postPreview: IPostPreview = {
       author: 'Deirdre, Phyllis, Vladimir, Damon',
       date: '17/07/2020',
       modified: '19/03/2021',
-      summary: 'ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent',
+      summary:
+        'ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent',
       title: 'mi.',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -180,7 +185,8 @@ export const postPreview: IPostPreview = {
       author: 'Karyn, Miriam, Chandler, Mannix',
       date: '04/12/2019',
       modified: '29/12/2019',
-      summary: 'at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;',
+      summary:
+        'at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;',
       title: 'ac mattis',
       status: 2,
       mainImg: 'https://picsum.photos/400',
@@ -190,7 +196,8 @@ export const postPreview: IPostPreview = {
       author: 'Acton, Keefe, Kaseem, Jamal',
       date: '31/03/2020',
       modified: '03/12/2019',
-      summary: 'magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris',
+      summary:
+        'magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris',
       title: 'interdum. Sed',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -233,7 +240,8 @@ export const postPreview: IPostPreview = {
       author: 'Lareina, Xander, Gareth, Shad',
       date: '04/09/2021',
       modified: '19/03/2020',
-      summary: 'Donec elementum, lorem ut aliquam iaculis, lacus pede sagittis augue, eu tempor',
+      summary:
+        'Donec elementum, lorem ut aliquam iaculis, lacus pede sagittis augue, eu tempor',
       title: 'odio',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -298,7 +306,8 @@ export const postPreview: IPostPreview = {
       author: 'Cherokee, Winter, Amal, Quentin',
       date: '24/10/2020',
       modified: '12/02/2020',
-      summary: 'elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer eu',
+      summary:
+        'elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer eu',
       title: 'Donec at arcu. Vestibulum ante ipsum',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -363,7 +372,8 @@ export const postPreview: IPostPreview = {
       author: 'Alden, Lawrence, Allen, Peter',
       date: '26/09/2021',
       modified: '18/03/2021',
-      summary: 'semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed',
+      summary:
+        'semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed',
       title: 'elit sed consequat auctor, nunc',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -373,7 +383,8 @@ export const postPreview: IPostPreview = {
       author: 'Marah, Karyn, Petra, Caleb',
       date: '25/07/2020',
       modified: '11/01/2020',
-      summary: 'elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed et libero. Proin',
+      summary:
+        'elit, pharetra ut, pharetra sed, hendrerit a, arcu. Sed et libero. Proin',
       title: 'ornare, libero at auctor ullamcorper, nisl',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -427,7 +438,8 @@ export const postPreview: IPostPreview = {
       author: 'Quamar, Jonas, Gage, Dennis',
       date: '31/03/2021',
       modified: '01/07/2020',
-      summary: 'non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque',
+      summary:
+        'non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque',
       title: 'ut, molestie in, tempus eu,',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -459,7 +471,8 @@ export const postPreview: IPostPreview = {
       author: 'Octavia, Harlan, Lysandra, Ava',
       date: '29/08/2021',
       modified: '17/03/2021',
-      summary: 'in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus ornare. Fusce',
+      summary:
+        'in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus ornare. Fusce',
       title: 'rutrum urna, nec luctus felis',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -469,7 +482,8 @@ export const postPreview: IPostPreview = {
       author: 'Adara, Tate, Kaseem, Justin',
       date: '27/01/2020',
       modified: '17/04/2020',
-      summary: 'fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu,',
+      summary:
+        'fermentum convallis ligula. Donec luctus aliquet odio. Etiam ligula tortor, dictum eu,',
       title: 'ac orci. Ut',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -512,7 +526,8 @@ export const postPreview: IPostPreview = {
       author: 'Salvador, Ishmael, Samson, Cameran',
       date: '12/08/2020',
       modified: '16/03/2020',
-      summary: 'sit amet, consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim',
+      summary:
+        'sit amet, consectetuer adipiscing elit. Aliquam auctor, velit eget laoreet posuere, enim',
       title: 'velit justo nec ante. Maecenas',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -533,7 +548,8 @@ export const postPreview: IPostPreview = {
       author: 'Yasir, Kylan, Malachi, Kelly',
       date: '28/06/2021',
       modified: '21/07/2020',
-      summary: 'fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem',
+      summary:
+        'fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem',
       title: 'ultricies sem magna',
       status: 2,
       mainImg: 'https://picsum.photos/400',
@@ -543,7 +559,8 @@ export const postPreview: IPostPreview = {
       author: 'Amena, Lawrence, Gillian, Amal',
       date: '06/05/2021',
       modified: '04/05/2020',
-      summary: 'conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare.',
+      summary:
+        'conubia nostra, per inceptos hymenaeos. Mauris ut quam vel sapien imperdiet ornare.',
       title: 'Aliquam adipiscing',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -553,7 +570,8 @@ export const postPreview: IPostPreview = {
       author: 'Wilma, Myles, Ivana, Montana',
       date: '10/12/2019',
       modified: '26/04/2020',
-      summary: 'risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum',
+      summary:
+        'risus. Nulla eget metus eu erat semper rutrum. Fusce dolor quam, elementum',
       title: 'dictum mi,',
       status: 2,
       mainImg: 'https://picsum.photos/400',
@@ -574,7 +592,8 @@ export const postPreview: IPostPreview = {
       author: 'Jenette, Patricia, Jayme, Jermaine',
       date: '29/11/2020',
       modified: '27/01/2020',
-      summary: 'mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor.',
+      summary:
+        'mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor.',
       title: 'ac arcu. Nunc',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -661,7 +680,8 @@ export const postPreview: IPostPreview = {
       author: 'Iris, Scott, Lael, Rhea',
       date: '24/06/2021',
       modified: '16/05/2020',
-      summary: 'turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id',
+      summary:
+        'turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer id',
       title: 'quam quis diam. Pellentesque habitant',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -704,7 +724,8 @@ export const postPreview: IPostPreview = {
       author: 'Ella, Devin, Gavin, Myra',
       date: '20/12/2019',
       modified: '09/10/2020',
-      summary: 'Nam interdum enim non nisi. Aenean eget metus. In nec orci. Donec nibh. Quisque',
+      summary:
+        'Nam interdum enim non nisi. Aenean eget metus. In nec orci. Donec nibh. Quisque',
       title: 'Pellentesque tincidunt tempus risus. Donec',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -714,7 +735,8 @@ export const postPreview: IPostPreview = {
       author: 'Dara, Ulric, Hiram, Eric',
       date: '24/06/2021',
       modified: '01/12/2020',
-      summary: 'metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien.',
+      summary:
+        'metus eu erat semper rutrum. Fusce dolor quam, elementum at, egestas a, scelerisque sed, sapien.',
       title: 'nec luctus',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -724,7 +746,8 @@ export const postPreview: IPostPreview = {
       author: 'Kristen, Katell, Arthur, Armand',
       date: '10/01/2021',
       modified: '27/11/2019',
-      summary: 'est, congue a, aliquet vel, vulputate eu, odio. Phasellus at augue id ante dictum',
+      summary:
+        'est, congue a, aliquet vel, vulputate eu, odio. Phasellus at augue id ante dictum',
       title: 'sed sem',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -745,7 +768,8 @@ export const postPreview: IPostPreview = {
       author: 'Jelani, Kevyn, Xavier, Justina',
       date: '01/09/2021',
       modified: '12/07/2020',
-      summary: 'cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris',
+      summary:
+        'cursus luctus, ipsum leo elementum sem, vitae aliquam eros turpis non enim. Mauris',
       title: 'Duis ac arcu.',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -788,7 +812,8 @@ export const postPreview: IPostPreview = {
       author: 'Clinton, Aidan, Tobias, Erasmus',
       date: '12/07/2020',
       modified: '22/06/2020',
-      summary: 'amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat',
+      summary:
+        'amet massa. Quisque porttitor eros nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat',
       title: 'libero lacus, varius et, euismod',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -809,7 +834,8 @@ export const postPreview: IPostPreview = {
       author: 'Yvette, Philip, Yuli, Tarik',
       date: '14/02/2020',
       modified: '20/05/2020',
-      summary: 'mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu.',
+      summary:
+        'mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu.',
       title: 'sit amet nulla. Donec non',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -819,7 +845,8 @@ export const postPreview: IPostPreview = {
       author: 'Cynthia, Mariam, Lisandra, Rigel',
       date: '24/08/2020',
       modified: '03/06/2020',
-      summary: 'Donec vitae erat vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse',
+      summary:
+        'Donec vitae erat vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse',
       title: 'ac turpis egestas. Aliquam fringilla',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -862,7 +889,8 @@ export const postPreview: IPostPreview = {
       author: 'Herrod, Wylie, Sharon, May',
       date: '02/07/2020',
       modified: '17/06/2020',
-      summary: 'est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac',
+      summary:
+        'est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac',
       title: 'Cum sociis natoque penatibus',
       status: 4,
       mainImg: 'https://picsum.photos/400',
@@ -872,7 +900,8 @@ export const postPreview: IPostPreview = {
       author: 'Brady, Brandon, Caryn, Montana',
       date: '01/09/2021',
       modified: '01/03/2020',
-      summary: 'urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum.',
+      summary:
+        'urna. Ut tincidunt vehicula risus. Nulla eget metus eu erat semper rutrum.',
       title: 'molestie tellus.',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -893,7 +922,8 @@ export const postPreview: IPostPreview = {
       author: 'Bernard, Keane, Flavia, Jenette',
       date: '24/12/2020',
       modified: '06/11/2019',
-      summary: 'sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut',
+      summary:
+        'sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Mauris ut',
       title: 'varius orci, in',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -903,7 +933,8 @@ export const postPreview: IPostPreview = {
       author: 'Gregory, Leila, Harding, Ori',
       date: '13/06/2021',
       modified: '06/12/2020',
-      summary: 'vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae',
+      summary:
+        'vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus vitae',
       title: 'pharetra ut, pharetra sed, hendrerit',
       status: 2,
       mainImg: 'https://picsum.photos/400',
@@ -1012,7 +1043,8 @@ export const postPreview: IPostPreview = {
       author: 'Quinn, Randall, Macy, Ryder',
       date: '24/06/2021',
       modified: '30/03/2020',
-      summary: 'enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est',
+      summary:
+        'enim. Etiam imperdiet dictum magna. Ut tincidunt orci quis lectus. Nullam suscipit, est',
       title: 'iaculis odio. Nam',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -1044,7 +1076,8 @@ export const postPreview: IPostPreview = {
       author: 'Audrey, Tanek, Mechelle, Hadley',
       date: '06/09/2020',
       modified: '20/03/2020',
-      summary: 'Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras',
+      summary:
+        'Etiam gravida molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras',
       title: 'metus vitae velit',
       status: 1,
       mainImg: 'https://picsum.photos/400',
@@ -1065,7 +1098,8 @@ export const postPreview: IPostPreview = {
       author: 'Lionel, Amena, Hall, Chadwick',
       date: '24/10/2020',
       modified: '30/05/2021',
-      summary: 'in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
+      summary:
+        'in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',
       title: 'sociosqu ad litora torquent',
       status: 3,
       mainImg: 'https://picsum.photos/400',
@@ -1082,4 +1116,4 @@ export const postPreview: IPostPreview = {
       mainImg: 'https://picsum.photos/400',
     },
   ],
-};
+}

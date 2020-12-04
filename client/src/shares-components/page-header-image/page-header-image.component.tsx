@@ -1,16 +1,17 @@
 /** @jsx jsx */
+import React from 'react'
 import { jsx, Box } from 'theme-ui'
 
 export default function PageHeaderImage({ title, img = '' }) {
   return (
-    <Box
+    <div
       sx={{
         position: 'relative',
         textAlign: 'center',
         color: 'white',
       }}
     >
-      <Box
+      <div
         sx={{
           position: 'relative',
           width: '400px',
@@ -35,13 +36,13 @@ export default function PageHeaderImage({ title, img = '' }) {
             verticalAlign: 'top',
           }}
         />
-      </Box>
-      {/* <Box sx={{
+      </div>
+      {/* <div sx={{
                 width: "100%",
                 height: "200px",
                 backgroundImage: `url(${img})`
-                }}></Box> */}
-      <Box
+                }}></div> */}
+      <div
         sx={{
           position: 'absolute',
           top: '50%',
@@ -50,7 +51,7 @@ export default function PageHeaderImage({ title, img = '' }) {
         }}
       >
         <h1>{title}</h1>
-      </Box>
-    </Box>
+      </div>
+    </div>
   )
 }
