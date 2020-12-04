@@ -1,6 +1,6 @@
 .blog-overview-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 10px;
     & > div {
         margin-bottom: 30px;
