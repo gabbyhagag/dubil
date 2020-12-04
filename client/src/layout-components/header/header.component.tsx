@@ -41,7 +41,9 @@ const Header = ({children}) => {
                   <MenuCoverPage isOpenMenu={isOpenMenu} toggleMenu={handleToggleMenu}></MenuCoverPage>
               </div>
             </div>
-            {children}
+            <div className="page-header">
+                {children}
+            </div>
         </header>
     );
 };
