@@ -6,7 +6,7 @@ import skylineimg from '../../assets/images/skyline-dubai.jpg'
 import PageHeaderImage from '../../shares-components/page-header-image/page-header-image.component'
 
 const BlogPage = () => {
-  const [postPreviewData, setPostPreviewData] = useState<IPostPreview>(
+  const [postPreviewData] = useState<IPostPreview>(
     postPreview as IPostPreview
   )
   return (
