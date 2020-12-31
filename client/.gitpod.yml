@@ -1,0 +1,4 @@
+tasks:
+  - before: export DANGEROUSLY_DISABLE_HOST_CHECK=true
+    init: yarn install
+    command: yarn start
